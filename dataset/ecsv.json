@@ -1,0 +1,603 @@
+{
+    "Status": 200,
+    "DataSet": {
+        "Arn": "arn:aws:quicksight:us-east-1:744150673701:dataset/6b3211e7-c99f-4ad2-a9c2-f52042583f90",
+        "DataSetId": "6b3211e7-c99f-4ad2-a9c2-f52042583f90",
+        "Name": "ecsv",
+        "CreatedTime": "2021-03-22T22:33:05.449000+09:00",
+        "LastUpdatedTime": "2021-05-11T15:40:27.470000+09:00",
+        "PhysicalTableMap": {
+            "e141bfb7-7799-4764-a1d9-61a1daeb98a5": {
+                "RelationalTable": {
+                    "DataSourceArn": "arn:aws:quicksight:us-east-1:744150673701:datasource/d236167c-62e0-4e9a-b24c-6f0e669cab4d",
+                    "Catalog": "AwsDataCatalog",
+                    "Schema": "jjmountain",
+                    "Name": "ecsv",
+                    "InputColumns": [
+                        {
+                            "Name": "invoiceid",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "payeraccountid",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "linkedaccountid",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "recordtype",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "recordid",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "billingperiodstartdate",
+                            "Type": "DATETIME"
+                        },
+                        {
+                            "Name": "billingperiodenddate",
+                            "Type": "DATETIME"
+                        },
+                        {
+                            "Name": "invoicedate",
+                            "Type": "DATETIME"
+                        },
+                        {
+                            "Name": "payeraccountname",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "linkedaccountname",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "taxationaddress",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "payerponumber",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "productcode",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "productname",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "sellerofrecord",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "usagetype",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "operation",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "rateid",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "itemdescription",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "usagestartdate",
+                            "Type": "DATETIME"
+                        },
+                        {
+                            "Name": "usageenddate",
+                            "Type": "DATETIME"
+                        },
+                        {
+                            "Name": "usagequantity",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "blendedrate",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "currencycode",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "costbeforetax",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "credits",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "taxamount",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "taxtype",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "totalcost",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "year",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "month",
+                            "Type": "STRING"
+                        }
+                    ]
+                }
+            }
+        },
+        "LogicalTableMap": {
+            "e141bfb7-7799-4764-a1d9-61a1daeb98a5": {
+                "Alias": "ecsv",
+                "DataTransforms": [
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "totalcost",
+                            "NewColumnName": "세후비용"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "taxtype",
+                            "NewColumnName": "세금종류"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "taxamount",
+                            "NewColumnName": "세금"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "credits",
+                            "NewColumnName": "Credit"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "costbeforetax",
+                            "NewColumnName": "세전비용"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "currencycode",
+                            "NewColumnName": "통화"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "usagequantity",
+                            "NewColumnName": "사용량"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "itemdescription",
+                            "NewColumnName": "설명"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "operation",
+                            "NewColumnName": "Operation"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "usagetype",
+                            "NewColumnName": "Usage 종류"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "sellerofrecord",
+                            "NewColumnName": "회사명"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "productname",
+                            "NewColumnName": "제품명"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "productcode",
+                            "NewColumnName": "제품코드"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "linkedaccountname",
+                            "NewColumnName": "Linked 이름"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "payeraccountname",
+                            "NewColumnName": "Payer 이름"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "invoicedate",
+                            "NewColumnName": "Invoice 날짜"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "billingperiodenddate",
+                            "NewColumnName": "청구종료일"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "billingperiodstartdate",
+                            "NewColumnName": "청구시작일"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "linkedaccountid",
+                            "NewColumnName": "Linked ID"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "payeraccountid",
+                            "NewColumnName": "Payer ID"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "invoiceid",
+                            "NewColumnName": "Invoice ID"
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "EDP금액*",
+                                    "ColumnId": "41d1b316-aa9b-4f85-9406-ab077b738c00",
+                                    "Expression": "ifelse(\r\n{설명} = 'Enterprise Program Discount', {세전비용}, 0\r\n)"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "매출금액*",
+                                    "ColumnId": "f9e907c4-523f-488f-adb6-2a81b53a730a",
+                                    "Expression": "ifelse(\r\n{세전비용} > 0, {세전비용}, 0\r\n)"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "Refund금액*",
+                                    "ColumnId": "fd772bd7-4c55-474b-8adf-23072b04daf1",
+                                    "Expression": "ifelse(\r\n(({세전비용} < 0) AND ({설명} <> 'Enterprise Program Discount')), {세전비용}, 0\r\n)\r\n"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "Credit금액*",
+                                    "ColumnId": "e58a3c1f-c766-4bdb-9f00-1f3b7c8f9f1a",
+                                    "Expression": "ifelse(\r\n{Credit} < 0, {Credit}, 0\r\n)\r\n"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "CABT*",
+                                    "ColumnId": "0e1f3394-e14c-4365-83e3-cabfac22d047",
+                                    "Expression": "{매출금액*} + {Refund금액*} + {Credit금액*}"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "CABT-TAX*",
+                                    "ColumnId": "66bd7c83-6a67-4e58-87bd-5f62f1587ef6",
+                                    "Expression": "{CABT*} * 0.1"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "CAAT*",
+                                    "ColumnId": "10781c5f-039f-4650-a288-bb3dac395063",
+                                    "Expression": "{CABT*} + {CABT-TAX*}"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "EDP세금*",
+                                    "ColumnId": "468249c0-ba7d-4a35-b617-7a04760278da",
+                                    "Expression": "{EDP금액*} * 0.1"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "청구금액*",
+                                    "ColumnId": "11a79cce-f633-455e-83cf-f2a320ace136",
+                                    "Expression": "{CAAT*} + {EDP금액*} + {EDP세금*}"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "FilterOperation": {
+                            "ConditionExpression": "NOT ({Linked 이름}=\"\")"
+                        }
+                    },
+                    {
+                        "FilterOperation": {
+                            "ConditionExpression": "NOT ({회사명}=\"\")"
+                        }
+                    },
+                    {
+                        "ProjectOperation": {
+                            "ProjectedColumns": [
+                                "Invoice ID",
+                                "Payer ID",
+                                "Linked ID",
+                                "recordtype",
+                                "recordid",
+                                "청구시작일",
+                                "청구종료일",
+                                "Invoice 날짜",
+                                "Payer 이름",
+                                "Linked 이름",
+                                "taxationaddress",
+                                "payerponumber",
+                                "제품코드",
+                                "제품명",
+                                "회사명",
+                                "Usage 종류",
+                                "Operation",
+                                "rateid",
+                                "설명",
+                                "usagestartdate",
+                                "usageenddate",
+                                "사용량",
+                                "blendedrate",
+                                "통화",
+                                "세전비용",
+                                "Credit",
+                                "세금",
+                                "세금종류",
+                                "세후비용",
+                                "year",
+                                "month",
+                                "EDP금액*",
+                                "매출금액*",
+                                "Refund금액*",
+                                "Credit금액*",
+                                "CABT*",
+                                "CABT-TAX*",
+                                "CAAT*",
+                                "EDP세금*",
+                                "청구금액*"
+                            ]
+                        }
+                    }
+                ],
+                "Source": {
+                    "PhysicalTableId": "e141bfb7-7799-4764-a1d9-61a1daeb98a5"
+                }
+            }
+        },
+        "OutputColumns": [
+            {
+                "Name": "Invoice ID",
+                "Type": "STRING"
+            },
+            {
+                "Name": "Payer ID",
+                "Type": "STRING"
+            },
+            {
+                "Name": "Linked ID",
+                "Type": "STRING"
+            },
+            {
+                "Name": "recordtype",
+                "Type": "STRING"
+            },
+            {
+                "Name": "recordid",
+                "Type": "STRING"
+            },
+            {
+                "Name": "청구시작일",
+                "Type": "DATETIME"
+            },
+            {
+                "Name": "청구종료일",
+                "Type": "DATETIME"
+            },
+            {
+                "Name": "Invoice 날짜",
+                "Type": "DATETIME"
+            },
+            {
+                "Name": "Payer 이름",
+                "Type": "STRING"
+            },
+            {
+                "Name": "Linked 이름",
+                "Type": "STRING"
+            },
+            {
+                "Name": "taxationaddress",
+                "Type": "STRING"
+            },
+            {
+                "Name": "payerponumber",
+                "Type": "STRING"
+            },
+            {
+                "Name": "제품코드",
+                "Type": "STRING"
+            },
+            {
+                "Name": "제품명",
+                "Type": "STRING"
+            },
+            {
+                "Name": "회사명",
+                "Type": "STRING"
+            },
+            {
+                "Name": "Usage 종류",
+                "Type": "STRING"
+            },
+            {
+                "Name": "Operation",
+                "Type": "STRING"
+            },
+            {
+                "Name": "rateid",
+                "Type": "STRING"
+            },
+            {
+                "Name": "설명",
+                "Type": "STRING"
+            },
+            {
+                "Name": "usagestartdate",
+                "Type": "DATETIME"
+            },
+            {
+                "Name": "usageenddate",
+                "Type": "DATETIME"
+            },
+            {
+                "Name": "사용량",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "blendedrate",
+                "Type": "STRING"
+            },
+            {
+                "Name": "통화",
+                "Type": "STRING"
+            },
+            {
+                "Name": "세전비용",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "Credit",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "세금",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "세금종류",
+                "Type": "STRING"
+            },
+            {
+                "Name": "세후비용",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "year",
+                "Type": "STRING"
+            },
+            {
+                "Name": "month",
+                "Type": "STRING"
+            },
+            {
+                "Name": "EDP금액*",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "매출금액*",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "Refund금액*",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "Credit금액*",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "CABT*",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "CABT-TAX*",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "CAAT*",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "EDP세금*",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "청구금액*",
+                "Type": "DECIMAL"
+            }
+        ],
+        "ImportMode": "SPICE",
+        "ConsumedSpiceCapacityInBytes": 2093427959,
+        "ColumnGroups": []
+    },
+    "RequestId": "60c6e4c8-6b83-4147-825e-0181b26502dd"
+}
